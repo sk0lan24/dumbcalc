@@ -1,0 +1,2 @@
+# dumbcalc
+calculate dumb shit
