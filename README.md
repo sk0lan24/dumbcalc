@@ -1,13 +1,17 @@
 # ![logo.png](img/logo.png)
 Calculate dumb shit, because why not
 
-## :file_folder: Dependencies
+## :pill: Dependencies
 `python3` `colorama` `pyfiglet`
 
-```python3
+```zsh
 python3 -m pip install -r requirements.txt
 ```
 ## :badger: Usage:
 Run the script and follow the instructions..dummy
+```zsh
+~ python3 dumbcalc.py
+```
 
-![dumb.sample](img/dumbsample.gif)
+## 📼 Example
+<img src="img/dumbsample.gif" width="400">
