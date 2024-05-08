@@ -14,4 +14,4 @@ Run the script and follow the instructions..dummy
 ```
 
 ## 📼 Example
-<img src="img/dumbsample.gif" width="400">
+<img src="img/dumbsample2.gif" width="500">
