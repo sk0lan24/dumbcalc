@@ -29,14 +29,14 @@ def main():
     banner = pyfiglet.figlet_format('dumbCalc')
     print(Fore.GREEN + banner)
     
-    high_score = float(input(Fore.RED + "Enter the highest possible score: "))
-    num_tiers = int(input(Fore.GREEN + "Enter the number of tiers: "))
-    decrease_factors = [float(input(Fore.MAGENTA + f"Enter the decrease factor for tier {i+1}: ")) for i in range(num_tiers)]
+    high_score = float(input(Fore.RED + "Enter the highest possible mark: "))
+    num_tiers = int(input(Fore.GREEN + "Enter the number of stupidity Tiers: "))
+    decrease_factors = [float(input(Fore.MAGENTA + f"Enter the decrease factor for Tier {i+1}: ")) for i in range(num_tiers)]
     num_questions = [0] * num_tiers
 
     total_questions = int(input(Fore.CYAN +"Enter the total number of questions asked: "))
     for i in range(total_questions):
-        tier = int(input(Fore.WHITE + f"Enter the tier (1-{num_tiers}) of question {i+1}: "))
+        tier = int(input(Fore.WHITE + f"Enter the stupidity tier (1-{num_tiers}) of question {i+1}: "))
         num_questions[tier - 1] += 1
 
     final_score = calculate_final_score(high_score, num_tiers, decrease_factors, num_questions)
@@ -45,7 +45,7 @@ def main():
     stupidity_level = calculate_stupidity_level(final_score, high_score)
 
     print()
-    print(f"{Fore.BLUE}╔═ ◘ {Style.RESET_ALL}{Fore.BLUE}Final Score: {Style.RESET_ALL}{Fore.GREEN}{final_score:.1f}{Style.RESET_ALL}")
+    print(f"{Fore.BLUE}╔═ ◘ {Style.RESET_ALL}{Fore.BLUE}Final Score: {Style.RESET_ALL}{Fore.GREEN}{final_score:.1f} of {high_score}{Style.RESET_ALL}")
     print(f"{Fore.BLUE}╠═══════════════════════╗{Style.RESET_ALL}")
     print(f"{Fore.BLUE}╠{Style.RESET_ALL}{Fore.YELLOW}══╗{Style.RESET_ALL}{Fore.YELLOW} ► Tier Penalties {Style.RESET_ALL}{Fore.BLUE}  ║{Style.RESET_ALL}")
     for i, penalty in enumerate(decrease_factors):
